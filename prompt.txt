@@ -1,0 +1,16 @@
+I have this JSON file in bytes:
+{
+    "name": "Nodirbek",
+    "age": 18
+}
+
+give me fuzztesting options for me in one JSON.
+GENERATE ALL POSSIBILITIES. In one remove name field, in two remove age field and SO ON.
+In response, you must return me fuzztested json objects each have description field. in description, you write what you changed in this json object. description field must be unique so rename description key to unique_description.
+Your example will be array of objects same with this below:
+
+{
+    "itisveryraredescription": "I changed this and this fields with these fields. Write sentence here with past simple",
+    "name": your example,
+    "age": your example
+}
