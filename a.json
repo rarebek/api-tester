@@ -1,6 +1,7 @@
 {
-    "phone_number": "+998889561006",
-    "password": "Nodirbek",
-    "name": "nodirbek",
-    "age": 19
+    "phone_number": "+998958727006",
+    "password": "mypassword",
+    "name": "Nodirbek",
+    "age": 18,
+    "gender": "male"
 }

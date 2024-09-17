@@ -12,7 +12,7 @@ import (
 func GenerateJSON(jsonData []byte) ([]map[string]interface{}, error) {
 
 	ctx := context.Background()
-	client, err := genai.NewClient(ctx, option.WithAPIKey("AIzaSyCEBU4MIMl2bMzBDR9ZPDjW-8k0JBVZEMM"))
+	client, err := genai.NewClient(ctx, option.WithAPIKey("AIzaSyCL2bS6172CTrGKuEO2hqxe59dWPSFyfRc"))
 	if err != nil {
 		return nil, err
 	}
@@ -45,6 +45,5 @@ func GenerateJSON(jsonData []byte) ([]map[string]interface{}, error) {
 	if err != nil {
 		return nil, err
 	}
-
 	return response, nil
 }

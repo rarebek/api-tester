@@ -1,0 +1,233 @@
+[
+  {
+    "request_index": 0,
+    "request_body": {
+      "age": 18,
+      "name": "Nodirbek",
+      "password": "mypassword",
+      "unique_description": "Removed phone_number field"
+    },
+    "status": "400 Bad Request",
+    "response_body": [
+      {
+        "field": "phonenumber",
+        "message": "The phonenumber field is required."
+      }
+    ]
+  },
+  {
+    "request_index": 1,
+    "request_body": {
+      "age": 18,
+      "name": "Nodirbek",
+      "phone_number": "+998958727006",
+      "unique_description": "Removed password field"
+    },
+    "status": "400 Bad Request",
+    "response_body": [
+      {
+        "field": "password",
+        "message": "The password field is required."
+      }
+    ]
+  },
+  {
+    "request_index": 2,
+    "request_body": {
+      "age": 18,
+      "password": "mypassword",
+      "phone_number": "+998958727006",
+      "unique_description": "Removed name field"
+    },
+    "status": "400 Bad Request",
+    "response_body": [
+      {
+        "field": "name",
+        "message": "The name field is required."
+      }
+    ]
+  },
+  {
+    "request_index": 3,
+    "request_body": {
+      "name": "Nodirbek",
+      "password": "mypassword",
+      "phone_number": "+998958727006",
+      "unique_description": "Removed age field"
+    },
+    "status": "400 Bad Request",
+    "response_body": [
+      {
+        "field": "age",
+        "message": "The age field is required."
+      }
+    ]
+  },
+  {
+    "request_index": 4,
+    "request_body": {
+      "age": 18,
+      "name": "Nodirbek",
+      "password": "mypassword",
+      "phone_number": 1234567890,
+      "unique_description": "Replaced phone_number with integer"
+    },
+    "status": "400 Bad Request",
+    "response_body": {
+      "error": "Invalid request body"
+    }
+  },
+  {
+    "request_index": 5,
+    "request_body": {
+      "age": 18,
+      "name": "Nodirbek",
+      "password": "mypassword",
+      "phone_number": "",
+      "unique_description": "Replaced phone_number with empty string"
+    },
+    "status": "400 Bad Request",
+    "response_body": [
+      {
+        "field": "phonenumber",
+        "message": "The phonenumber field is required."
+      }
+    ]
+  },
+  {
+    "request_index": 6,
+    "request_body": {
+      "age": 18,
+      "name": "Nodirbek",
+      "password": 123456,
+      "phone_number": "+998958727006",
+      "unique_description": "Replaced password with integer"
+    },
+    "status": "400 Bad Request",
+    "response_body": {
+      "error": "Invalid request body"
+    }
+  },
+  {
+    "request_index": 7,
+    "request_body": {
+      "age": 18,
+      "name": "Nodirbek",
+      "password": "",
+      "phone_number": "+998958727006",
+      "unique_description": "Replaced password with empty string"
+    },
+    "status": "400 Bad Request",
+    "response_body": [
+      {
+        "field": "password",
+        "message": "The password field is required."
+      }
+    ]
+  },
+  {
+    "request_index": 8,
+    "request_body": {
+      "age": 18,
+      "name": 1234,
+      "password": "mypassword",
+      "phone_number": "+998958727006",
+      "unique_description": "Replaced name with integer"
+    },
+    "status": "400 Bad Request",
+    "response_body": {
+      "error": "Invalid request body"
+    }
+  },
+  {
+    "request_index": 9,
+    "request_body": {
+      "age": 18,
+      "name": "",
+      "password": "mypassword",
+      "phone_number": "+998958727006",
+      "unique_description": "Replaced name with empty string"
+    },
+    "status": "400 Bad Request",
+    "response_body": [
+      {
+        "field": "name",
+        "message": "The name field is required."
+      }
+    ]
+  },
+  {
+    "request_index": 10,
+    "request_body": {
+      "age": "eighteen",
+      "name": "Nodirbek",
+      "password": "mypassword",
+      "phone_number": "+998958727006",
+      "unique_description": "Replaced age with string"
+    },
+    "status": "400 Bad Request",
+    "response_body": {
+      "error": "Invalid request body"
+    }
+  },
+  {
+    "request_index": 11,
+    "request_body": {
+      "age": -18,
+      "name": "Nodirbek",
+      "password": "mypassword",
+      "phone_number": "+998958727006",
+      "unique_description": "Replaced age with negative integer"
+    },
+    "status": "400 Bad Request",
+    "response_body": [
+      {
+        "field": "age",
+        "message": "The age must be at least 1."
+      }
+    ]
+  },
+  {
+    "request_index": 12,
+    "request_body": {
+      "age": 18,
+      "name": "Nodirbek",
+      "new_field": "new_value",
+      "password": "mypassword",
+      "phone_number": "+998958727006",
+      "unique_description": "Added extra field"
+    },
+    "status": "200 OK",
+    "response_body": {
+      "message": "Request is valid"
+    }
+  },
+  {
+    "request_index": 13,
+    "request_body": {
+      "age": 18,
+      "name": "Nodirbek123",
+      "password": "mypassword",
+      "phone_number": "+998958727006",
+      "unique_description": "Added number to name field"
+    },
+    "status": "200 OK",
+    "response_body": {
+      "message": "Request is valid"
+    }
+  },
+  {
+    "request_index": 14,
+    "request_body": {
+      "age": 18.5,
+      "name": "Nodirbek",
+      "password": "mypassword",
+      "phone_number": "+998958727006",
+      "unique_description": "Made age a float"
+    },
+    "status": "400 Bad Request",
+    "response_body": {
+      "error": "Invalid request body"
+    }
+  }
+]
